@@ -29,6 +29,7 @@ export class MyComponent {
   render() {
     return (
       <header class="bg-purple-700 h-16 flex items-center shadow-md">
+        <button class="btn btn-green">Button</button>
         <h1 class="text-white text-xl font-bold px-3">Hello, World! I'm {this.getText()}</h1>
       </header>
     );
