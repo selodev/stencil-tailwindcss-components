@@ -1,0 +1,35 @@
+@import '../../global/global.css';
+
+:host {
+  display: block;
+}
+button {
+  @apply rounded-lg px-4 py-2;
+}
+.primary {
+  @apply bg-blue-500 text-blue-100 hover:bg-blue-600 duration-300;
+}
+.secondary {
+  @apply bg-gray-600 text-gray-100 hover:bg-gray-700 duration-300;
+}
+.success {
+  @apply bg-green-700 text-green-100 hover:bg-green-800 duration-300;
+}
+.danger {
+  @apply bg-red-600 text-red-100 hover:bg-red-700 duration-300;
+}
+.warning {
+  @apply bg-yellow-500 hover:bg-yellow-600 duration-300;
+}
+.info {
+  @apply bg-green-300 hover:bg-green-400 duration-300;
+}
+.light {
+  @apply bg-gray-200 hover:bg-gray-300 duration-300;
+}
+.dark {
+  @apply bg-gray-900 text-gray-100;
+}
+.link {
+  @apply underline text-blue-500 hover:text-blue-600 duration-300;
+}

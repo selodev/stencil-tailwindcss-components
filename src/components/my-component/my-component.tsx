@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, Host } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
@@ -27,11 +27,15 @@ export class MyComponent {
   }
 
   render() {
+    // Tailwind classes on host do not work.
     return (
-      <header class="bg-purple-700 h-16 flex items-center shadow-md">
-        <button class="btn btn-green">Button</button>
-        <h1 class="text-white text-xl font-bold px-3">Hello, World! I'm {this.getText()}</h1>
-      </header>
+      <Host tabIndex={-1} class="py-2 px-4 font-semibold rounded-lg shadow-md">
+        <header class="">
+          <button class="btn btn-green">Button</button>
+          <h1 class="text-white text-xl font-bold px-3">Hello, World! I'm {this.getText()}</h1>
+        </header>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">Button</button>
+      </Host>
     );
   }
 }
